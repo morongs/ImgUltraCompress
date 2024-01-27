@@ -1,50 +1,91 @@
-* {touch-action: manipulation;}
-.canvas-wrap{ width:100%; height:100%; position:fixed; left:0; top:0; }
+* {
+  touch-action: manipulation;
+  box-sizing: border-box;
+}
+
+.canvas-wrap {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
 
 body {
-    overflow-y: auto;
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .common {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .body-mb {
-    top: 40vh;
-    width: 70%;
+  top: 8vh;
+  width: 78%;
+  max-height: 82vh;
+  overflow-y: auto;
+  transform: translateX(-50%);
 }
 
 .body-pc {
-    top: 40vh;
-    width: 40%;
+  top: 40vh;
+  width: 40%;
 }
 
 
 .el-upload {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 #app {
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.7); /* 半透明背景 */
-    backdrop-filter: blur(10px); /* 毛玻璃效果 */
-    border-radius: 10px; /* 可选：添加圆角 */
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 可选：添加阴影效果 */
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  /* 半透明背景 */
+  backdrop-filter: blur(10px);
+  /* 毛玻璃效果 */
+  border-radius: 10px;
+  /* 可选：添加圆角 */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* 可选：添加阴影效果 */
 }
+
 .slider-container {
-    margin: 20px 0;
+  margin: 20px 0;
 }
+
 .button {
-    margin: 10px 0;
+  margin: 10px 0;
+}
+
+.body-mb .el-upload-dragger {
+  width: 100%;
+}
+.upload-text {
+  padding: 0 20px;
+}
+.upload-tip {
+  font-size: 14px;
+}
+
+.reload {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.reload a {
+  color: #666;
 }
